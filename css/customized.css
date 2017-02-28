@@ -1,0 +1,43 @@
+.modal-body h1 {
+	margin: 0px;
+	font-family: "FFMarkWeb";
+	font-weight: 600;
+	margin-bottom: 30px;
+	/*color: black;*/
+}
+
+.modal-body p {
+	font-family: "FFMarkWeb";
+	font-weight: 300;
+	/*color: #999;*/
+	color: black;
+	font-size: 150%;
+}
+
+.modal-body a {
+	display: none
+}
+
+.modal-body td{
+	font-family: "FFMarkWeb";
+	font-weight: 300;
+	/*color: #999;*/
+	color: black;
+	font-size: 150%;
+}
+.modal-body tr {
+/*	border-bottom: 	grey;
+	border-bottom-width: thin;
+	border-bottom-style: solid;*/
+}
+.modal-body th {
+	color: #8aaad9;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+	.hide {
+		display: none;
+	}
+}
