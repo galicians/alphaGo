@@ -189,7 +189,7 @@ $(document).ready(function() {
 	  "showInteraction": true
 	};
 	
-	twitterFetcher.fetch(configTweets);
+	// twitterFetcher.fetch(configTweets);
 
 	function handleTweets(tweets){
 	
