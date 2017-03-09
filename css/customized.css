@@ -33,11 +33,14 @@
 .modal-body th {
 	color: #8aaad9;
 }
+/*a svg g {
+	fill: black;
+}*/
 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) { 
-	.hide {
-		display: none;
-	}
-}
+/*#main-nav.scrolled .navbar-brand{
+ color:#f05557;
+ }*/
+
+ #main-nav.scrolled a svg g {
+  	fill: #8aaad9;
+ }
