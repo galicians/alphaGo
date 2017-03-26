@@ -34,6 +34,35 @@ gulp.task('styles', ['minify-css','concat-css','clean-styles'], function() {
 	console.log('styles processing')
 })
 
+
+var concat = require('gulp-concat');
+ 
+gulp.task('scripts', function() {
+  // return gulp.src('./js/**/*.js')
+  return gulp.src(['js/libs/modernizr.min.js','js/libs/bootstrap.min.js','js/jquery.scrollto.js','js/jquery.flexslider.min.js','js/jquery.masonry.min.js','js/waypoints.min.js','js/jquery.easypiechart.min.js',
+  	'js/jquery.backstretch.min.js','js/contact.js','js/designr.js'])
+    .pipe(concat('own.js'))
+    .pipe(gulp.dest('./build/js/'));
+});
+
+// gulp.task('optimize', function() {
+// 	console.log('Optimizing the javascript');
+// 	// var assets = $.useref.assets({searchPath: './'});
+// 	// var templateCache = config.temp + config.templateCache.file;
+// 	// var cssFilter = $.filter('**/*.css');
+// 	// var jsLibFilter = $.filter('**/lib.js');
+// 	// var jsAppFilter = $.filter('**/app.js');
+
+// 	return gulp
+// 		.src('./js/**/*.js')
+// 		// .pipe(jsLibFilter)
+// 		// .pipe($.babel({compact: true}))
+// 		.pipe(uglify({quote_keys: true}))
+// 		// .pipe(jsLibFilter.restore())
+// 		// .pipe(jsAppFilter)
+// 		.pipe(gulp.dest('./build/css/own.js'))
+// });
+
 gulp.task('clean-styles', function(done) {
 	clean('./temp/css/'+ '*.css', done);
 });
