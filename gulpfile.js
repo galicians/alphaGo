@@ -1,11 +1,47 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')({lazy: true});
+var del = require('del');
+var path = require('path');
 // var config = require('./gulp.config')();
 
 gulp.task('serve-dev', ['inject'], function() {
 	serve(true /* isDev */);
 });
+
+var concatCss = require('gulp-concat-css');
+
+gulp.task('concat-css', function() {
+	console.log('Bundling css in one file');
+	// return gulp.src(['!' + './css/*.css'])
+	return gulp.src(['./css/bootstrap.css', './css/customized.css', './css/designr-theme-cyan.css', './css/font-awesome.min.css', './css/google-fonts.css'])
+		.pipe(concatCss('own.css'))
+		.pipe(gulp.dest('./temp/css/'));
+});
+
+var cleanCSS = require('gulp-clean-css');
+
+gulp.task('minify-css', function() {
+	return gulp.src('./temp/css/*.css')
+	.pipe(cleanCSS({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
+	.pipe(gulp.dest('./build/css'))
+})
+
+gulp.task('styles', ['minify-css','concat-css','clean-styles'], function() {
+	console.log('styles processing')
+})
+
+gulp.task('clean-styles', function(done) {
+	clean('./temp/css/'+ '*.css', done);
+});
+
+function clean(path, done) {
+	console.log('Cleaning: ' + path);
+	del(path, done);
+}
 
 gulp.task('inject',  function() {
 	console.log('Wire up the app css into the html, and call wiredep ');

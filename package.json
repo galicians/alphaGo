@@ -13,10 +13,14 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat-css": "^2.3.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-nodemon": "^2.2.1",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7"
   },
   "scripts": {
     "start": "node server/index.js",
