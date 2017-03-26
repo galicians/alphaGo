@@ -1,0 +1,13 @@
+# humanstxt.org/
+
+# TEAM
+
+  <name> -- <role> -- <twitter>
+
+# THANKS
+
+  <name>
+  Pablo -- @pportabales
+  GoDigital -- @goDigitalHQ
+
+
