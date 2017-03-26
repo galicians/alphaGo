@@ -14,7 +14,7 @@ var concatCss = require('gulp-concat-css');
 gulp.task('concat-css', function() {
 	console.log('Bundling css in one file');
 	// return gulp.src(['!' + './css/*.css'])
-	return gulp.src(['./css/bootstrap.css', './css/customized.css', './css/designr-theme-cyan.css', './css/font-awesome.min.css', './css/google-fonts.css'])
+	return gulp.src(['./css/customized.css', './css/designr-theme-cyan.css', './css/font-awesome.min.css', './css/google-fonts.css','./css/flexslider.css','./css/bootstrap.css'])
 		.pipe(concatCss('own.css'))
 		.pipe(gulp.dest('./temp/css/'));
 });
