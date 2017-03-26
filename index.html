@@ -30,7 +30,9 @@
 <!-- 
 		<link rel="stylesheet" href="./build/css/own.css"> -->
 
-
+		<script>
+		$(document).ready(function(){$(window).load(function(){$('#page-loader').fadeOut(500);});if($(window).scrollTop()===0){$('#main-nav').removeClass('scrolled');}else{$('#main-nav').addClass('scrolled');}$(window).scroll(function(){if($(window).scrollTop()===0){$('#main-nav').removeClass('scrolled');}else{$('#main-nav').addClass('scrolled');}});$('a.scrollto').click(function(e){$('html,body').scrollTo(this.hash,this.hash,{gap:{y:-80}});e.preventDefault();if($('.navbar-collapse').hasClass('in')){$('.navbar-collapse').removeClass('in').addClass('collapse');}});$('.jumbotron').height($(window).height()+50);$('.message-box').css({'marginTop':$(window).height()*0.4});$('.home-slider').flexslider({animation:"slide",directionNav:false,controlNav:false,direction:"vertical",slideshowSpeed:2500,animationSpeed:500,smoothHeight:false});var aboutColor=$('#about').css('backgroundColor');$('#skills').waypoint(function(){$('.chart').each(function(){$(this).easyPieChart({size:170,animate:2000,lineCap:'butt',scaleColor:false,barColor:aboutColor,lineWidth:10});});},{offset:'80%'});$(window).load(function(){$('#projects-container').css({visibility:'visible'});$('#projects-container').masonry({itemSelector:'.project-item:not(.filtered)',columnWidth:350,isFitWidth:true,isResizable:true,isAnimated:!Modernizr.csstransitions,gutterWidth:0});scrollSpyRefresh();waypointsRefresh();});$('#filter-works a').click(function(e){e.preventDefault();$('#filter-works li').removeClass('active');$(this).parent('li').addClass('active');var category=$(this).attr('data-filter');$('.project-item').each(function(){if($(this).is(category)){$(this).removeClass('filtered');}else{$(this).addClass('filtered');}$('#projects-container').masonry('reload');});scrollSpyRefresh();waypointsRefresh();});$('.project-item').click(function(e){e.preventDefault();var elem=$(this),title=elem.find('.project-title').text(),link=elem.attr('href'),descr=elem.find('.project-description').html(),slidesHtml='<ul class="slides">',slides=elem.data('images').split(',');for(var i=0;i<slides.length;++i){slidesHtml=slidesHtml+'<li><img src='+slides[i]+' alt=""></li>';}slidesHtml=slidesHtml+'</ul>';$('#project-modal').on('show.bs.modal',function(){$(this).find('h1').text(title);$(this).find('.btn').attr('href',link);$(this).find('.project-descr').html(descr);$(this).find('.image-wrapper').addClass('flexslider').html(slidesHtml);setTimeout(function(){$('.image-wrapper.flexslider').flexslider({slideshowSpeed:3000,animation:'slide',controlNav:false,start:function(){$('#project-modal .image-wrapper').addClass('done').prev('.loader').fadeOut();}});},1000);}).modal();});$('#project-modal').on('hidden.bs.modal',function(){$(this).find('.loader').show();$(this).find('.image-wrapper').removeClass('flexslider').removeClass('done').html('').flexslider('destroy');});var tweetsLength=$('#twitter-slider').data('tweets-length'),widgetID=$('#twitter-slider').data('widget-id');var configTweets={"id":widgetID,"domId":'',"maxTweets":tweetsLength,"enableLinks":true,"showUser":false,"showTime":true,"dateFunction":'',"showRetweet":false,"customCallback":handleTweets,"showInteraction":true};function handleTweets(tweets){var x=tweets.length,n=0,tweetsHtml='<ul class="slides">';while(n<x){tweetsHtml+='<li>'+tweets[n]+'</li>';n++;}tweetsHtml+='</ul>';$('#twitter-slider').html(tweetsHtml);$('.twitter_reply_icon').html("<i class='fa fa-reply'></i>");$('.twitter_retweet_icon').html("<i class='fa fa-retweet'></i>");$('.twitter_fav_icon').html("<i class='fa fa-heart'></i>");$('#twitter-slider').flexslider({prevText:'<i class="fa fa-angle-left"></i>',nextText:'<i class="fa fa-angle-right"></i>',slideshowSpeed:5000,useCSS:true,controlNav:false,pauseOnAction:false,pauseOnHover:true,smoothHeight:false});}$(window).resize(function(){$('.jumbotron').height($(window).height());$('.message-box').css({'marginTop':$(window).height()*0.4});scrollSpyRefresh();waypointsRefresh();});$.backstretch('assets/header-bg.jpg');$('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');$('#about').waypoint(function(direction){if($('.preload-image').length){$('.preload-image').remove();}$('.backstretch').remove();if(direction=='down'){$.backstretch('assets/contact-bg.jpg');}else{$.backstretch('assets/header-bg.jpg');}});$('.no-csstransitions .hover-mask').hover(function(){$(this).stop(true,true).animate({opacity:1});},function(){$(this).stop(true,true).animate({opacity:0});});if(!Modernizr.input.placeholder){$('#contact-form').addClass('no-placeholder');}$('.scrollimation').waypoint(function(){$(this).toggleClass('in');},{offset:'90%'});function scrollSpyRefresh(){setTimeout(function(){$('body').scrollspy('refresh');},1000);}function waypointsRefresh(){setTimeout(function(){$.waypoints('refresh');},1000);}});
+		</script>
 		<style>
 			/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -308,7 +310,7 @@
 					<!-- ==============================================
 					SINGLE PROJECT ITEM
 					=============================================== -->	
-					<a class="project-item web-design" href="http://www.google.com" data-images="assets/curriculum/week1/design-sprint-steps.png,assets/curriculum/week1/design-week.png,assets/week1/curriculum/agile_lean.png">
+					<a class="project-item web-design" href="http://www.google.com" style="width:350px;height:230px;" data-images="assets/curriculum/week1/design-sprint-steps.png,assets/curriculum/week1/design-week.png,assets/week1/curriculum/agile_lean.png">
 						
 						<!-- <img class="img-responsive project-image" data-normal="assets/weeks/design_sprint.png"  alt=""> -->
 
@@ -341,9 +343,9 @@
 					END PROJECT ITEM
 					=============================================== -->						
 					
-					<a class="project-item icons ui-kits" href="#somelink" data-images="assets/curriculum/week2/bootstrap_screens.jpg,assets/curriculum/week2/html_css.jpg,assets/curriculum/week2/rd_image.png, assets/curriculum/week2/dev_tools.png">
+					<a class="project-item icons ui-kits" href="#somelink"  style="width:350px;height:230px;" data-images="assets/curriculum/week2/bootstrap_screens.jpg,assets/curriculum/week2/html_css.jpg,assets/curriculum/week2/rd_image.png, assets/curriculum/week2/dev_tools.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/user_interface.jpg" alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif"  class="img-responsive project-image" data-echo="assets/weeks/user_interface.jpg" alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">User Interface Design</h2><!--Project Title -->
@@ -367,9 +369,9 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item web-design ui-kits" href="#somelink" data-images="assets/curriculum/week3/ui.png,assets/curriculum/week3/ux-plugins.jpg,assets/curriculum/week3/ux.png">
+					<a class="project-item web-design ui-kits"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week3/ui.png,assets/curriculum/week3/ux-plugins.jpg,assets/curriculum/week3/ux.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/ux.jpg"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/ux.jpg"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">User Experience Design</h2><!--Project Title -->
@@ -394,10 +396,10 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item ui-kits" href="https://www.google.com" data-images="assets/curriculum/week4/octocat_darkwood_small.jpg,assets/curriculum/week4/javascript.jpg,assets/curriculum/week4/rob-debug.png">
+					<a class="project-item ui-kits"  style="width:350px;height:230px;" href="https://www.google.com" data-images="assets/curriculum/week4/octocat_darkwood_small.jpg,assets/curriculum/week4/javascript.jpg,assets/curriculum/week4/rob-debug.png">
 						
 						<!-- <img class="img-responsive project-image" src="assets/weeks/right-brain-left-brain_3.jpg"  alt=""><!--Project thumb --> 
-						<img class="img-responsive project-image" data-echo="assets/curriculum/week4/coding_mindset.jpg"  alt="">
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/curriculum/week4/coding_mindset.jpg"  alt="">
 						
 						<div class="hover-mask">
 							<h2 class="project-title">Coding & Mindset</h2><!--Project Title -->
@@ -423,9 +425,9 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item icons" href="#somelink" data-images="assets/curriculum/week5/choosing-framework.jpg, assets/curriculum/week5/js_ecosystem.png, assets/curriculum/week5/js_libraries.png">
+					<a class="project-item icons"  style="width:350px;height:230px;"  href="#somelink" data-images="assets/curriculum/week5/choosing-framework.jpg, assets/curriculum/week5/js_ecosystem.png, assets/curriculum/week5/js_libraries.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/js_frontend_1.png"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/js_frontend_1.png"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">JavaScript Frontend</h2><!--Project Title -->
@@ -451,9 +453,9 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item web-design" href="#somelink" data-images="assets/curriculum/week6/online-apis.jpg,assets/curriculum/week6/network.jpg, assets/curriculum/week6/events.jpg">
+					<a class="project-item web-design"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week6/online-apis.jpg,assets/curriculum/week6/network.jpg, assets/curriculum/week6/events.jpg">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/cloud.jpg"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/cloud.jpg"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">Cloud possibilities</h2><!--Project Title -->
@@ -477,9 +479,9 @@
 						<!-- http, apis, jquery -->
 					</a><!--End Project Item -->
 
-					<a class="project-item web-design" href="#somelink" data-images="assets/curriculum/week9/angular-react-vue-logos.png,assets/curriculum/week9/plug.jpg">
+					<a class="project-item web-design"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week9/angular-react-vue-logos.png,assets/curriculum/week9/plug.jpg">
 						
-						<img class="img-responsive project-image" data-echo="assets/curriculum/week9/week9_cover.png"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/curriculum/week9/week9_cover.png"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">JS Front-End frameworks</h2><!--Project Title -->
@@ -503,9 +505,9 @@
 						
 					</a><!--End Project Item -->
 					
-					<a class="project-item icons" href="#somelink" data-images="assets/curriculum/week7/backend_frontend.png,assets/curriculum/week7/mongodb_1.png, assets/curriculum/week7/npm_growth.png">
+					<a class="project-item icons"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week7/backend_frontend.png,assets/curriculum/week7/mongodb_1.png, assets/curriculum/week7/npm_growth.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/curriculum/week7/bk_cover.jpg"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/curriculum/week7/bk_cover.jpg"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">Backend</h2><!--Project Title -->
@@ -530,9 +532,9 @@
 						
 					</a><!--End Project Item -->
 					
-					<a class="project-item web-design" href="#somelink" data-images="assets/curriculum/week8/node-exp.jpg,assets/curriculum/week8/rest_api_2.png">
+					<a class="project-item web-design"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week8/node-exp.jpg,assets/curriculum/week8/rest_api_2.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/API.png" alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/API.png" alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">Connecting to the cloud</h2><!--Project Title -->
@@ -555,9 +557,9 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item web-design" href="#somelink" data-images="assets/curriculum/week_12/contacts.jpg, assets/curriculum/week_12/roadmap.png,assets/curriculum/week_12/elevator_pitch.jpg">
+					<a class="project-item web-design" style="width:350px;height:230px;"  href="#somelink" data-images="assets/curriculum/week_12/contacts.jpg, assets/curriculum/week_12/roadmap.png,assets/curriculum/week_12/elevator_pitch.jpg">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/mvp.jpg"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/mvp.jpg"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">MVP live</h2><!--Project Title -->
@@ -580,9 +582,9 @@
 						
 					</a><!--End Project Item -->
 
-					<a class="project-item web-design" href="http://www.google.com" data-images="assets/curriculum/week_10/agile_cycle.png, assets/curriculum/week_10/user-stories.jpg,assets/curriculum/week_10/scrum-members.png">
+					<a class="project-item web-design"  style="width:350px;height:230px;" href="http://www.google.com" data-images="assets/curriculum/week_10/agile_cycle.png, assets/curriculum/week_10/user-stories.jpg,assets/curriculum/week_10/scrum-members.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/agile_storm.png"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/agile_storm.png"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">Agile Methodology</h2><!--Project Title -->
@@ -605,9 +607,9 @@
 						
 					</a><!--End Project Item -->
 					
-					<a class="project-item icons" href="#somelink" data-images="assets/curriculum/week_11/scrum.jpeg, assets/curriculum/week_11/sprint-planning.png">
+					<a class="project-item icons"  style="width:350px;height:230px;" href="#somelink" data-images="assets/curriculum/week_11/scrum.jpeg, assets/curriculum/week_11/sprint-planning.png">
 						
-						<img class="img-responsive project-image" data-echo="assets/weeks/table_5.png"  alt=""><!--Project thumb -->
+						<img src="assets/preloader.gif" class="img-responsive project-image" data-echo="assets/weeks/table_5.png"  alt=""><!--Project thumb -->
 						
 						<div class="hover-mask">
 							<h2 class="project-title">One Week Sprint</h2><!--Project Title -->
