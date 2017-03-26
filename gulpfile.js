@@ -39,7 +39,7 @@ var concat = require('gulp-concat');
  
 gulp.task('scripts', function() {
   // return gulp.src('./js/**/*.js')
-  return gulp.src(['js/libs/modernizr.min.js','js/libs/bootstrap.min.js','js/jquery.scrollto.js','js/jquery.flexslider.min.js','js/jquery.masonry.min.js','js/waypoints.min.js','js/jquery.easypiechart.min.js',
+  return gulp.src(['js/libs/modernizr.min.js','js/libs/jquery-1.9.1.min.js','js/libs/bootstrap.min.js','js/jquery.scrollto.js','js/jquery.flexslider.min.js','js/jquery.masonry.min.js','js/waypoints.min.js','js/jquery.easypiechart.min.js',
   	'js/jquery.backstretch.min.js','js/contact.js','js/designr.js'])
     .pipe(concat('own.js'))
     .pipe(gulp.dest('./build/js/'));
