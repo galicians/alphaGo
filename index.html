@@ -103,6 +103,9 @@
 							<a href="#deal" class="scrollto">About us</a>
 						</li>
 						<li>
+							<a href="#contact" class="scrollto">Contact</a>
+						</li>
+						<li>
 							<a href="#myskills" class="scrollto">Skills</a>
 						</li>
 							<li>
@@ -111,9 +114,7 @@
 						<li>
 							<a href="#faq" class="scrollto">Faq</a>
 						</li>
-						<li>
-							<a href="#contact" class="scrollto">Contact</a>
-						</li>
+						
 					</ul>
 				</div><!--End navbar-collapse -->
 				
@@ -172,16 +173,97 @@
 					</div> -->
 					<div class="col-sm-12 col-sm-offset-0 scrollimation fade-left" style="text-align: center;">
 						<p style="line-height: 56px;">
-						You will be in our lab from 6:00-8:30, Monday to Thursday, for 12 weeks. <br>
+						GoDigital provides face to face courses, in London, from 6:00-8:30, Monday to Thursday, for 12 weeks. <br>
 					In return, you will end up with a working Minimum Viable Product (MVP) and all the knowledge and skills to transform any idea into a digital product and impress potential investors.<br>
-					Our evening course will provide you with an environment of like-minded people who will help you to stay motivated and build the right habits.<br>
-					</div>
+					<!-- Our evening course will provide you with an environment of like-minded people who will help you to stay motivated and build the right habits.<br>
+ -->					</div>
 				</div><!--End row -->
 				
 			</div><!--End container -->
 			
 		</section><!--End about section -->
 	</section>
+	<!-- ==============================================
+		CONTACT
+		=============================================== -->	
+		<section  id="contact">
+		
+			<div class="container">
+			
+				<h1 class="section-title scrollimation scale-in">Get your tech stack<span></span></h1>
+				
+				<div class="row">
+				
+					<div class="col-sm-5 contact-info scrollimation fade-right">
+						
+						<p>
+						
+						If you want to get an architectural assessment from one of our mentors, just describe your idea in fewer than 50 words. It's not a pitch—we are more interested on the technical side.  <br><br>This will description help us decide if our programme is the right fit for your idea, suggest the technologies you can use to implement your product, and identify the key features you will be able to get done during the 12 weeks.<br> 
+						<br> 
+						Please if you have any question just send us a message and we will come back to you within the same day.<br>
+						<br>We will come back to you with the architectural assessment within 48 hours. <!-- Feel free to tick, the NDA option, if you want back a non disclosure agreement signed by us. --><br>
+						</p>
+						
+						<address>
+							The GoDigital team<br>
+							1 Dufferin Street, EC1Y<br>
+							Near Old st, London<br>
+							(+44) 7565125107
+						</address>
+						
+						<ul class="socials">
+							<li><a href="https://twitter.com/goDigitalHQ" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/eveningSkills" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/godigital-academy" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<!-- <li><a href="https://www.quora.com/profile/GoDigital-Academy" target="_blank"><i class="fa fa-quora"></i></a></li> -->
+							<li><a href="https://medium.com/@goDigitalHQ" target="_blank"><i class="fa fa-medium"></i></a></li>
+							<li><a href="mailto:contact@godigital.academy"><i class="fa fa-envelope-o"></i></a></li>
+						</ul>
+						
+					</div>
+				  
+					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-name">Name</label>
+						  <div class="controls">
+							<i class="fa fa-user"></i>
+							<input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+						  </div>
+						</div><!-- End name input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-mail">Email</label>
+						  <div class=" controls">
+							<i class="fa fa-envelope"></i>
+							<input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+						  </div>
+						</div><!-- End email input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-message">Message</label>
+							<div class="controls">
+								<i class="fa fa-comment"></i>
+								<textarea id="contact-message" name="comments"  placeholder="My idea/question is ..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
+							</div>
+						</div><!-- End textarea -->
+
+						<p>
+							<div class="checkbox">
+  								<label style="font-size:18px;"><input style="height: 20px;width: 18px;" type="checkbox" value="">I would like a non disclosure agreement</label>
+							</div>
+						</p>
+
+						<p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
+						<input type="hidden" name="submitted" id="submitted" value="true" />
+						
+					</form><!-- End contact-form -->
+				  
+				</div><!-- End row -->
+				
+			</div><!-- End container -->
+			
+		</section><!-- End contact section -->
 		<!-- ==============================================
 		SERVICES
 		=============================================== -->
@@ -248,21 +330,22 @@
 				<div class="row skills">
 
 					<div class="col-sm-6 col-md-3 text-center">
-						<span class="chart" data-percent="1"><span class="percent">1</span></span>
-						<h2 class="text-center">Talent</h2>
+						<span class="chart" data-percent="100"><span class="percent">100</span></span>
+						<h2 class="text-center">Commitment</h2>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
-						<span class="chart" data-percent="4"><span class="percent">4</span></span>
-						<h2 class="text-center">Creativity</h2>
-					</div>
-					<div class="col-sm-6 col-md-3 text-center">
-						<span class="chart" data-percent="15"><span class="percent">15</span></span>
-						<h2 class="text-center">Reason</h2>
+						<span class="chart" data-percent="90"><span class="percent">90</span></span>
+						<h2 class="text-center">Momentum</h2>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span class="chart" data-percent="80"><span class="percent">80</span></span>
-						<h2 class="text-center">Persistance</h2>
+						<h2 class="text-center">Vision</h2>
 					</div>
+					<div class="col-sm-6 col-md-3 text-center">
+						<span class="chart" data-percent="15"><span class="percent">15</span></span>
+						<h2 class="text-center">Expertise</h2>
+					</div>
+					
 					
 				</div><!--End row -->
 				
@@ -861,84 +944,7 @@
 			
 		</section><!-- End Twitter section -->
 
-		<!-- ==============================================
-		CONTACT
-		=============================================== -->	
-		<section  id="contact">
 		
-			<div class="container">
-			
-				<h1 class="section-title scrollimation scale-in">Share your Idea/Question<span></span></h1>
-				
-				<div class="row">
-				
-					<div class="col-sm-5 contact-info scrollimation fade-right">
-						
-						<p>
-						Please if you have any question just send us a message and we will come back to you within the same day.<br><br>
-						If you want to get an architectural assessment from one of our tutors, just describe your idea in fewer than 50 words. It's not a pitch—we are more interested on the technical side.  <br><br>This will description help us decide if our programme is the right fit for your idea, suggest the technologies you can use to implement your product, and identify the key features you will be able to get done during the 12 weeks.<br> We will come back to you with the architectural assessment within 48 hours. <!-- Feel free to tick, the NDA option, if you want back a non disclosure agreement signed by us. --><br>
-						</p>
-						
-						<address>
-							The GoDigital team<br>
-							1 Dufferin Street, EC1Y<br>
-							Near Old st, London<br>
-							(+44) 7565125107
-						</address>
-						
-						<ul class="socials">
-							<li><a href="https://twitter.com/goDigitalHQ" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.facebook.com/eveningSkills" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/godigital-academy" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-							<!-- <li><a href="https://www.quora.com/profile/GoDigital-Academy" target="_blank"><i class="fa fa-quora"></i></a></li> -->
-							<li><a href="https://medium.com/@goDigitalHQ" target="_blank"><i class="fa fa-medium"></i></a></li>
-							<li><a href="mailto:contact@godigital.academy"><i class="fa fa-envelope-o"></i></a></li>
-						</ul>
-						
-					</div>
-				  
-					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
-						
-						<div class="form-group">
-						  <label class="control-label" for="contact-name">Name</label>
-						  <div class="controls">
-							<i class="fa fa-user"></i>
-							<input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
-						  </div>
-						</div><!-- End name input -->
-						
-						<div class="form-group">
-						  <label class="control-label" for="contact-mail">Email</label>
-						  <div class=" controls">
-							<i class="fa fa-envelope"></i>
-							<input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
-						  </div>
-						</div><!-- End email input -->
-						
-						<div class="form-group">
-						  <label class="control-label" for="contact-message">Message</label>
-							<div class="controls">
-								<i class="fa fa-comment"></i>
-								<textarea id="contact-message" name="comments"  placeholder="My idea/question is ..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
-							</div>
-						</div><!-- End textarea -->
-
-						<p>
-							<div class="checkbox">
-  								<label style="font-size:18px;"><input style="height: 20px;width: 18px;" type="checkbox" value="">I would like a non disclosure agreement</label>
-							</div>
-						</p>
-
-						<p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
-						<input type="hidden" name="submitted" id="submitted" value="true" />
-						
-					</form><!-- End contact-form -->
-				  
-				</div><!-- End row -->
-				
-			</div><!-- End container -->
-			
-		</section><!-- End contact section -->
 		
 		<!-- ==============================================
 		FOOTER
