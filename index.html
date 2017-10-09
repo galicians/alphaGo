@@ -221,8 +221,8 @@
 						</ul>
 						
 					</div>
-				  
-					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
+				  <!-- Begin MailChimp Signup Form -->
+					<form action="//telrock.us11.list-manage.com/subscribe/post?u=fafbccc05f6505c7f2dd855aa&amp;id=9d586f11c4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
 						
 						<div class="form-group">
 						  <label class="control-label" for="contact-name">Name</label>
@@ -254,10 +254,13 @@
 							</div>
 						</p>
 
-						<p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
+						<p><button name="subscribe" id="mc-embedded-subscribe" type="submit" value="Subscribe" class="btn btn-theme btn-lg button" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
 						<input type="hidden" name="submitted" id="submitted" value="true" />
+
 						
 					</form><!-- End contact-form -->
+
+					<!--End mc_embed_signup-->
 				  
 				</div><!-- End row -->
 				
@@ -996,6 +999,9 @@
 		=============================================== -->	
 
 		<script type="text/javascript" src="./build/js/own.js" defer></script>
+
+		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='MMERGE2';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 
 		<script>
 	window.echo = (function (window, document) {
