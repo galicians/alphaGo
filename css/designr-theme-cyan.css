@@ -1165,7 +1165,27 @@ header.jumbotron{
     text-transform:uppercase;
 }
 
-#contact-form.no-placeholder .form-group label{
+#mc-embedded-subscribe-form .form-group label {
+    display:none;
+    font-size:18px;
+    line-height:24px;
+    font-weight:400;
+    text-transform:uppercase;
+}
+
+#mc-embedded-subscribe-form .form-group label {
+    display:none;
+    font-size:18px;
+    line-height:24px;
+    font-weight:400;
+    text-transform:uppercase;
+}
+
+#contact-form.no-placeholder .form-group label {
+    display:block;
+}
+
+#mc-embedded-subscribe-form.no-placeholder .form-group label {
     display:block;
 }
 
@@ -1185,7 +1205,27 @@ header.jumbotron{
     padding-left:64px;
 }
 
+#mc-embedded-subscribe-form .form-control {
+    background:#fff;
+    background:rgba(255,255,255,0.9);
+    border:none;
+    border-radius:1px;
+    outline:none;
+    box-shadow:none;
+    margin-bottom:30px;
+    height:68px;
+    font-size:30px;
+    line-height:48px;
+    font-weight:300;
+    color:#8aaad9;
+    padding-left:64px;
+}
+
 #contact-form .form-group{
+    position:relative;
+}
+
+#mc-embedded-subscribe-form .form-group{
     position:relative;
 }
 
@@ -1203,7 +1243,25 @@ header.jumbotron{
 
 }
 
+#mc-embedded-subscribe-form .form-group [class*="fa-"] {
+    display:block;
+    width:64px;
+    position:absolute;
+    top:0;
+    left:5px;
+    color:#8aaad9;
+    font-size:32px;
+    line-height:68px;
+    text-align:center;
+    font-weight:300;
+
+}
+
 #contact-form.no-placeholder .form-group [class*="fa-"]{
+    top:30px;
+}
+
+#mc-embedded-subscribe-form.no-placeholder .form-group [class*="fa-"]{
     top:30px;
 }
 
@@ -1216,7 +1274,22 @@ header.jumbotron{
 	padding-top:14px;
 }
 
+#mc-embedded-subscribe-form textarea.form-control {
+    height:auto;
+    max-width:100%;
+    min-width:100%;
+    font-size:30px;
+    line-height:42px;
+    padding-top:14px;
+}
+
 #contact-form .form-control:focus {
+    border:none;
+    outline:none;
+    box-shadow:none;
+}
+
+#mc-embedded-subscribe-form .form-control:focus {
     border:none;
     outline:none;
     box-shadow:none;
@@ -1225,19 +1298,51 @@ header.jumbotron{
 #contact-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
     color:    #8aaad9;
 }
+
+#mc-embedded-subscribe-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #8aaad9;
+}
+
 #contact-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:    #8aaad9;
     opacity:1;
 }
+
+#mc-embedded-subscribe-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #8aaad9;
+    opacity:1;
+}
+
 #contact-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
     color:    #8aaad9;
     opacity:1;
 }
+
+#mc-embedded-subscribe-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #8aaad9;
+    opacity:1;
+}
+
+
 #contact-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #8aaad9;
 }
 
+#mc-embedded-subscribe-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #8aaad9;
+}
+
 #contact-form .error-message {
+    background:#8aaad9;
+    padding:10px 20px;
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    font-size:16px;
+    font-weight:400;
+}
+
+#mc-embedded-subscribe-form .error-message {
     background:#8aaad9;
     padding:10px 20px;
     position:absolute;
